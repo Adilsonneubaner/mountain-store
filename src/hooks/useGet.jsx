@@ -6,7 +6,7 @@ export const useGet = (url) => {
     const {callGet} = useContext(DataContext)
     
     useEffect(() => {
-        const fechData = async () => {
+        const fetchData = async () => {
             setLoading(true)
             try{
                 const res = await fetch(url)
@@ -17,7 +17,7 @@ export const useGet = (url) => {
             }
             setLoading(false)
         }
-        fechData()
+        fetchData()
     }, [url, callGet])
    return {data,loading}
 }

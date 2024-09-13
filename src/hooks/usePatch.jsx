@@ -6,7 +6,7 @@ export const usePatch = () => {
     const [method, setMethod] = useState()
     const [config, setConfig] = useState()
 
-    const url = 'https://json-server-api-projeto-products.vercel.app/products'
+    const url = 'https://coconut-mewing-success.glitch.me/products'
 
     const {setCallGet} = useContext(DataContext)
 

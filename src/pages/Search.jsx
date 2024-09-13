@@ -8,7 +8,7 @@ const Search = () => {
     const [searchParams] = useSearchParams()
     let query = searchParams.get('q')
     query = query.toLowerCase()
-    const url = 'https://json-server-api-projeto-products.vercel.app/products'
+    const url = 'https://coconut-mewing-success.glitch.me/products'
     const {data} = useGet(url)
     const filteredData = data?.filter(product => product.stringLower.includes(query))
   return (

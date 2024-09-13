@@ -14,7 +14,7 @@ import 'swiper/css/pagination'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
-  const url = 'https://json-server-api-projeto-products.vercel.app/products'
+  const url = 'https://coconut-mewing-success.glitch.me/products'
   const {data, loading} = useGet(url)
 
   return (

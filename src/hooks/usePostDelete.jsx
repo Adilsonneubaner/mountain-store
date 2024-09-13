@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { DataContext } from "../context/DataContext";
 
 export const usePostDelete = () => {
-    const url = 'https://json-server-api-projeto-products.vercel.app/products'
+    const url = 'https://coconut-mewing-success.glitch.me/products'
     const [config, setConfig] = useState()
     const [method, setMethod] = useState()
     

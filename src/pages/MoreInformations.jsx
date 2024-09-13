@@ -9,7 +9,7 @@ import { useGet } from "../hooks/useGet"
 const MoreInformations = () => {
     const {id} = useParams()
 
-    const url = `https://json-server-api-projeto-products.vercel.app/products/${id}`
+    const url = `https://coconut-mewing-success.glitch.me/products/${id}`
     const {data} = useGet(url)
     
   return (
