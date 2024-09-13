@@ -228,7 +228,24 @@ input[type = 'submit']:hover{
     background-color: #f7a26581;
 }
 @media(width <= 550px){
+    #form-addProduct{
+        padding: 10px 30px;
+    }
     .name-price input{
         width: 130px;
+    }
+    #photo label{
+        font-size: .8em;
+        margin-right: 15px;
+    }
+    #sucess{
+        font-size: .8em;
+        font-weight: 400;
+    }
+    #photo span{
+        font-size: .7em;
+    }
+    input[type = 'submit']{
+        font-size: .8em;
     }
 }
