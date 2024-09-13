@@ -18,11 +18,11 @@ function App() {
       <BrowserRouter>
         <Navbar/>
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/products' element={<Products/>}/>
-          <Route path='/add-product' element={<AddProduct/>}/>
-          <Route path='/more-information/:id' element={<MoreInformations/>}/>
-          <Route path='/search' element={<Search/>}/>
+          <Route path='/products' element={<Home/>}/>
+          <Route path='/products/all-products' element={<Products/>}/>
+          <Route path='/products/add-product' element={<AddProduct/>}/>
+          <Route path='/products/more-information/:id' element={<MoreInformations/>}/>
+          <Route path='/products/search' element={<Search/>}/>
         </Routes>
       </BrowserRouter>
     </>
