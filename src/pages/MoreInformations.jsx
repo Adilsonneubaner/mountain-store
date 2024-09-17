@@ -43,8 +43,8 @@ const MoreInformations = () => {
                       </div>
                     </div>
                     <div id="buttons">
-                      <button className='product-button' id='buy'>Comprar</button>
-                      <button className='product-button' id='cart'>Adicionar ao carrinho</button>
+                      <button className='product-button' id='buy' onClick={() => window.alert('ERRO! Recurso indispinível no momento =(')}>Comprar</button>
+                      <button className='product-button' id='cart' onClick={() => window.alert('ERRO! Recurso indispinível no momento =(')}>Adicionar ao carrinho</button>
                     </div>
                   </div>
                 </div>

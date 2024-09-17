@@ -100,6 +100,7 @@ const AddProduct = () => {
       }, 3000)
       setName('')
       setPrice('')
+      setEmphasis(false)
       setLabel('')
       setDescription('')
       setPhoto('')
@@ -155,7 +156,7 @@ const AddProduct = () => {
               <textarea id='description' value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
             </label>
           </div><br/>
-          <div className='container-input'>
+          <div className='container-input' id='container-select-photo'>
             <p>Selecionar foto</p>
             <div id='photo'>
               <label>Escolher arquivo

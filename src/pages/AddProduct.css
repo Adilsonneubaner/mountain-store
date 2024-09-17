@@ -179,23 +179,33 @@
     outline: none;
     resize: none;
 }
+#container-select-photo{
+   min-width: auto;
+   max-width: 100%;
+}
 #photo{
-    margin-top: 15px;
     background-color: white;
-    padding: 7px 10px 7px 5px;
-    border-radius: 10px;
     border: 2px solid #DFB567;
+    margin-top: 15px;
+    padding: 5px 10px 5px 5px;
+    border-radius: 10px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
 }
 #photo label{
     background-color: #9e8047;
     color: white;
     font-size: .9em;
-    padding: 7px 10px;
+    text-wrap: nowrap;
+    padding: 10px;
     border-radius: 10px;
-    margin-right: 30px;
 }
 #photo span{
     font-size: .8em;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #photo input{
     display: none;

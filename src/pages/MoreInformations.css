@@ -91,4 +91,7 @@
         display: flex;
         gap: 10px;
     }
+    .pay-method p, .pay-method i{
+        font-size: 1.1em;
+    }
 }

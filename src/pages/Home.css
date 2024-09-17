@@ -26,7 +26,7 @@ span.swiper-pagination-bullet-active{
     background: white;
 }
 .container-destaque{
-    padding: 0px 50px 50px 50px;
+    padding: 0px 30px 30px 30px;
 }
 .title-destaque{
     font-family: "Alfa Slab One", serif;
@@ -77,4 +77,9 @@ span.swiper-pagination-bullet-active{
     text-decoration: underline;
     font-style: italic;
     color: #F29966;
+}
+@media(width <= 500px){
+    .title-destaque{
+        font-size: 4.5em;
+    }
 }
