@@ -1,7 +1,7 @@
 .container-slide{
     width: 100%;
     height: 500px;
-    background: url(../images/slide.png) center top;
+    background: url(../images/slide.jpeg) center top;
     background-size: cover;
     display: flex;
     padding: 50px;
@@ -9,7 +9,7 @@
     align-items: center;
 }
 .slide-text{
-    color: rgb(141, 90, 53);
+    color: rgb(156, 101, 61);
     text-shadow: 0px 0px 00px rgba(0, 0, 0, 0.301);
     font-size: 1.7em;
     max-width: 600px;
@@ -20,17 +20,17 @@
     text-decoration: underline;
 }
 .swiper-button-prev::after, .swiper-button-next::after{
-    color: white;
+    color: rgb(156, 101, 61);
 }
 span.swiper-pagination-bullet-active{
-    background: white;
+    background: rgb(156, 101, 61);
 }
 .container-destaque{
     padding: 0px 30px 30px 30px;
 }
 .title-destaque{
     font-family: "Alfa Slab One", serif;
-    background: linear-gradient(90deg, rgba(247,162,101,1) 26%, rgba(247,223,101,1) 100%);
+    background: linear-gradient(90deg, #f7a265 26%, #f7df65 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -77,6 +77,11 @@ span.swiper-pagination-bullet-active{
     text-decoration: underline;
     font-style: italic;
     color: #F29966;
+}
+@media(width <= 1200px){
+    .container-slide{
+        background-image: url(../images/slide2.jpeg);
+    }
 }
 @media(width <= 500px){
     .title-destaque{

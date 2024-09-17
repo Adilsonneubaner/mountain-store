@@ -1,8 +1,9 @@
 #title{
+    background: linear-gradient(90deg, rgba(247,162,101,1) 26%, rgba(247,223,101,1) 100%);
+    padding: 0 10px;
     margin-top: 200px;
     text-align: center;
     font-size: 2.7em;
-    background: linear-gradient(90deg, rgba(247,162,101,1) 26%, rgba(247,223,101,1) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -32,7 +33,7 @@
     z-index: 1;
 }
 .category:has(.select-category:checked){
-   outline: 10px solid #bd9545;
+    background: linear-gradient(90deg, rgba(247,162,101,1) 26%, rgba(247,223,101,1) 100%);
 }
 .img-category{
     width: 100%;

@@ -9,11 +9,11 @@ import { usePatch } from '../hooks/usePatch'
 
 import { Link } from 'react-router-dom'
 
-import vestuario from '../images/clothing.png'
+import vestuario from '../images/clothing-filter.png'
 import ferramentas from '../images/tools.png'
 import tecnologia from '../images/technology.png'
-import esporte from '../images/sport.png'
-import casa from '../images/house.png'
+import esporte from '../images/sport-filter.png'
+import casa from '../images/house-filter.png'
 
 import { useRef} from 'react'
 

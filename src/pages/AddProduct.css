@@ -221,7 +221,7 @@
     left: 0;
     font-size: 0.9em;
     font-weight: 500;
-    color: #a2ca90;
+    color: rgb(14, 167, 14);
 }
 input[type = 'submit']{
     padding: 10px 30px;
