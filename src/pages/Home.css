@@ -39,6 +39,13 @@ span.swiper-pagination-bullet-active{
     text-align: center;
     margin-top: 100px;
 }
+.loading{
+    color: rgb(156, 101, 61);
+    font-size: 2em;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 50px;
+}
 #conteudo-destaque{
     margin: 200px 0;
     display: flex;

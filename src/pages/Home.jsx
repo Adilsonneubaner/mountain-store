@@ -28,22 +28,28 @@ const Home = () => {
         >
           <SwiperSlide>
             <div className='container-slide'>
-              <p className="slide-text">Nessa página você poderá ver os produtos adicionados em destaque. Veja os próximos slides para conhecer todas as funcionalidades do site!</p>
+              <p className="slide-text">ATENÇÃO! Esse projeto não tenta simular um E-commerce, nele apenas apresento minhas habilidades com algumas funcionalidades de um. Veja os próximos slides para conhecer todas as funcionalidades do site</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='container-slide'>
+              <p className="slide-text">Nessa página você poderá ver os produtos adicionados em destaque</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="container-slide">
-              <p className="slide-text">Na página Produtos você poderá navegar entre as categorias de produtos e adicionar ou remover produtos da lista de destaque.</p>
+              <p className="slide-text">Na página PRODUTOS você poderá navegar entre as categorias de produtos e adicionar ou remover produtos da lista de destaque</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="container-slide">
-              <p className="slide-text">Você pode cadastrar um novo produto na página Adicionar produtos basta preencher todos os dados sobre o produto.</p>
+              <p className="slide-text">Você pode cadastrar um novo produto na página ADICIONAR PRODUTOS, basta preencher todos os dados sobre o produto</p>
             </div>
           </SwiperSlide>
         </Swiper>
         <div className="container-destaque">
           <h1 className="title-destaque">Destaque</h1>
+          {loading && <p className='loading'>Carregando os resultados...</p>}
           <div id="conteudo-destaque">
             {data && data.map((data) => (
               data.emphasis && 
