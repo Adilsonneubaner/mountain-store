@@ -4,6 +4,7 @@ import './OffCanvas.css'
 import { NavLink} from "react-router-dom"
 import { DataContext } from "../context/DataContext"
 
+
 const OffCanvas = ({offCanvas, setOffCanvas, handleNavigate}) => {
     const {search, setSearch} = useContext(DataContext)
 

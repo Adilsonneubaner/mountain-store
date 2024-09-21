@@ -1,6 +1,13 @@
 #navbar{
     padding: 30px;
     background-color: rgba(247,162,101);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo{
+    width: 200px;
+    margin-right: 20px;
 }
 #nav-links{
     display: flex;
@@ -52,13 +59,14 @@
     color: white;
     display: none;
 }
-@media(width <= 850px){
+@media(width <= 1060px){
     .menu{
-        display: inline-block;
-        display: flex;
-        justify-content: end;
+        display: block;
     }
     #nav-links{
+        display: none;
+    }
+    #search{
         display: none;
     }
 }
