@@ -1,4 +1,5 @@
 import './Home.css'
+
 import Footer from '../components/Footer'
 
 import { useGet } from '../hooks/useGet'
@@ -28,7 +29,7 @@ const Home = () => {
         >
           <SwiperSlide>
             <div className='container-slide'>
-              <p className="slide-text">ATENÇÃO! Esse projeto não tenta simular um E-commerce, nele apenas apresento minhas habilidades com algumas funcionalidades de um. Veja os próximos slides para conhecer todas as funcionalidades do site</p>
+              <p className="slide-text">ATENÇÃO! Esse projeto não tenta simular um E-commerce, nele apenas apresento minhas habilidades com algumas funcionalidades de um. Veja os próximos slides para conhecer todos os recursos</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -47,6 +48,7 @@ const Home = () => {
             </div>
           </SwiperSlide>
         </Swiper>
+        
         <div className="container-destaque">
           <h1 className="title-destaque">Destaque</h1>
           {loading && <p className='loading'>Carregando os resultados...</p>}

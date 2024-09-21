@@ -1,14 +1,19 @@
 import './AddProduct.css'
+
 import Footer from "../components/Footer"
 import Modal from '../components/Modal'
+
 import { useState, useContext, useRef } from 'react'
+
 import { DataContext } from '../context/DataContext'
+
 import { usePostDelete } from '../hooks/usePostDelete'
 
 
 const AddProduct = () => {
   const {httpConfig} = usePostDelete()
 
+  // Opções para o select personalizado
   const inputsOptions = [
     {value: 'clothing', label: 'Vestuário', id: 1},
     {value: 'tools', label: 'Ferramentas', id: 2},
@@ -19,19 +24,25 @@ const AddProduct = () => {
 
   const {name, setName, price, setPrice, fees, setFees, category, setCategory, emphasis, setEmphasis, description, setDescription, photo, setPhoto} = useContext(DataContext)
 
+  // Label para o select personalizado
   const [label, setLabel] = useState()
 
-  const [closeOpen, setCloseOpen] = useState()
+  // F
+  const closeOpen = useRef()
 
+  // Controla o modal de validação
   const [modal, setModal] = useState(false)
 
+  
+  // Controla mensagem de envio com sucesso
   const [sucess, setSucess] = useState(false)
 
+  
+  // Label para o input file personalizado
   const [labelPhoto, setLabelPhoto] = useState('')
 
+  // Desativa botão de Adicionar enquanto a requisição está sendo realizada
   const [sending, setSending] = useState(false)
-
-  const inputsCategory = useRef()
 
 
   const handlePrice = (e) => {
@@ -44,7 +55,7 @@ const AddProduct = () => {
   const handleCategory = (e) => {
     setCategory(e.target.value)
     setLabel(e.target.dataset.label)
-    closeOpen.click()
+    closeOpen.current.click()
   }
 
   const handlePhoto = (e) => {
@@ -58,8 +69,9 @@ const AddProduct = () => {
       setModal(true)
     }else{
       setSending(true)
+      
+      // Envia a foto para um serviço de imagens e pega seu link para ser utilizado
       let urlPhoto = ''
-
       const addPhoto = async () => {
         const formData = new FormData()
         formData.append('file', photo)
@@ -94,10 +106,12 @@ const AddProduct = () => {
         photo:urlPhoto
       }
       httpConfig(data, "POST")
+
       setSucess(true)
       setTimeout(() => {
         setSucess(false)
       }, 3000)
+
       setName('')
       setPrice('')
       setEmphasis(false)
@@ -112,20 +126,23 @@ const AddProduct = () => {
     <>
       <main id='main-add-product'>
         <form onSubmit={handleSubmit} id="form-addProduct">
+          
           <div className='container-input name-price'>
             <label>Nome do produto
               <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
             </label>
           </div><br/>
+
           <div className='container-input name-price'>
             <label>Preço
               <input type="number" value={price} step='0.01' onChange={handlePrice}/>
             </label>
           </div><br/>
+
           <div className="container-input select">
             <div id="category-select">
               <label htmlFor="options-view-button">Categoria</label>
-              <input type="checkbox" id='options-view-button' onChange={(e) => setCloseOpen(e.target)}/>
+              <input type="checkbox" id='options-view-button' ref={closeOpen}/>
               <div id="select-button">
               <div id='select-value'>{label ? (label) : ('Selecione uma categoria')}</div>
                 <div id="icons">
@@ -134,7 +151,8 @@ const AddProduct = () => {
                 </div>
               </div>
             </div> 
-            <ul id="options" ref={inputsCategory}>
+
+            <ul id="options">
               {inputsOptions.map((inputOpition) => (
                 <li className='option' key={inputOpition.id}>
                   <input type="radio" name="category" value={inputOpition.value} data-label={inputOpition.label} onClick={handleCategory}/>
@@ -144,6 +162,7 @@ const AddProduct = () => {
               ))}
             </ul>
           </div><br/>
+
           <div className='container-input'>
             <p>Adicionar aos destaques </p>
             <label id='switch'>
@@ -151,11 +170,13 @@ const AddProduct = () => {
               <span id="slider"></span>
             </label>
           </div><br/>
+
           <div className='container-input' id='container-description'>
             <label>Descrição <br/>
               <textarea id='description' value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
             </label>
           </div><br/>
+
           <div className='container-input' id='container-select-photo'>
             <p>Selecionar foto</p>
             <div id='photo'>
@@ -165,11 +186,13 @@ const AddProduct = () => {
               <span>{labelPhoto ? (labelPhoto) : 'Nenhum arquivo selecionado'}</span>
             </div>
           </div><br/>
+
           <div className='container-input' id='submit'>
             {sucess && <p id='sucess'>Item adiconado com sucesso!</p>}
             {!sending && <input type="submit" value="Adiconar"/>}
             {sending && <input type="submit" disabled value="Enviando" id='sending'/>}
           </div>
+          
         </form>
       </main>
       <Modal isOpen={modal} setIsOpen ={() => setModal(!modal)}></Modal>

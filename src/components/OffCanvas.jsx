@@ -1,23 +1,31 @@
+import '../components/Navbar.css'
 import {useRef, useContext} from 'react'
 import './OffCanvas.css'
 import { NavLink} from "react-router-dom"
-import '../components/Navbar.css'
 import { DataContext } from "../context/DataContext"
+
 const OffCanvas = ({offCanvas, setOffCanvas, handleNavigate}) => {
     const {search, setSearch} = useContext(DataContext)
 
-    const canvas = useRef()
     const closeCanvas = useRef()
+
+    const canvas = useRef()
     const handleCloseCanvas = (e) => {
         if(canvas.current && !canvas.current.contains(e.target)){
             setOffCanvas()
         }
     }
+
     const handleSubmit = (e) => {
         e.preventDefault()
+       if(search === ''){
+        window.alert('Digite um termo para realizar a pesquisa')
+       }else{
         handleNavigate(search)
         setOffCanvas()
+       }
     }
+    
   if(offCanvas === true){
     return (
         <div id='off-canvas' onClick={handleCloseCanvas}>

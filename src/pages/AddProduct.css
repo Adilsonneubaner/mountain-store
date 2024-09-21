@@ -73,6 +73,9 @@
     position: absolute;
     inset: 0;
 }
+#category-select:has(#options-view-button:checked) + #options{
+    display: block;
+}
 #options{
     background-color: white;
     margin-top: 3px;
@@ -93,6 +96,9 @@
 .bi-check{
     display: none;
 }
+.option:has(input:checked) .bi-check{
+    display: block;
+}
 .option:first-child{
     border-radius: 7px 7px 0 0;
 }
@@ -106,17 +112,12 @@
     background-color: #DFB567;
     color: white;
 }
-.option:has(input:checked) .bi-check{
-    display: block;
-}
 .option input[type = 'radio']{
     all: unset;
     position: absolute;
     inset: 0;
 }
-#category-select:has(#options-view-button:checked) + #options{
-    display: block;
-}
+/* Estilo toggle switch */
 #switch {
     --button-width: 3.5em;
     --button-height: 2em;
@@ -166,6 +167,7 @@
 #switch input[type="checkbox"]:checked:active + #slider::after {
     transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
 }
+
 #container-description{
     display: block;
 }
@@ -190,7 +192,7 @@
     padding: 5px 10px 5px 5px;
     border-radius: 10px;
     display: flex;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
 }
 #photo label{

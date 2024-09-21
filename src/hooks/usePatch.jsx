@@ -8,6 +8,7 @@ export const usePatch = () => {
 
     const url = 'https://coconut-mewing-success.glitch.me/products'
 
+    // Altera o valor para que aja uma nova requisição GET para atualizar os dados
     const {setCallGet} = useContext(DataContext)
 
     const patchConfig = (data, id, method) => {

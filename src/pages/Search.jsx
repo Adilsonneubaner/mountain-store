@@ -1,7 +1,10 @@
-import { useSearchParams, Link } from "react-router-dom"
-import { useGet } from "../hooks/useGet"
 import './Home.css'
 import './Search.css'
+
+import { useSearchParams, Link } from "react-router-dom"
+
+import { useGet } from "../hooks/useGet"
+
 import Footer from "../components/Footer"
 
 const Search = () => {

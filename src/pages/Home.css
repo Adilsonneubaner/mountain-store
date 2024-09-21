@@ -9,22 +9,19 @@
     align-items: center;
 }
 .slide-text{
-    color: rgb(156, 101, 61);
-    text-shadow: 0px 0px 00px rgba(0, 0, 0, 0.301);
+    color: #9c653d;
     font-size: 1.7em;
     max-width: 600px;
-    border-radius: 20px 0 20px 0;
     font-weight: 700;
 }
-.text-highlighted{
-    text-decoration: underline;
-}
+/* Classes para editar elementos Swiper */
 .swiper-button-prev::after, .swiper-button-next::after{
     color: rgb(156, 101, 61);
 }
 span.swiper-pagination-bullet-active{
     background: rgb(156, 101, 61);
 }
+
 .container-destaque{
     padding: 0px 30px 30px 30px;
 }
@@ -47,7 +44,7 @@ span.swiper-pagination-bullet-active{
     margin-top: 50px;
 }
 #conteudo-destaque{
-    margin: 200px 0;
+    margin: 100px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

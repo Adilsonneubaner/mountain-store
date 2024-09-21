@@ -17,13 +17,16 @@ const MoreInformations = () => {
       <main>
           {data && (
               <div id='container-product'>
+
                 <div id="conteudo-product">
+
                   <div id="container-img">
-                  <div className="img-product" style={{
-                    background: `white url(${data.photo}) center center no-repeat`,
-                    backgroundSize: 'contain'
-                  }}></div>
+                    <div className="img-product" style={{
+                      background: `white url(${data.photo}) center center no-repeat`,
+                      backgroundSize: 'contain'
+                    }}></div>
                   </div>
+                  
                   <div id="data-product">
                     <p  id='product-title'>{data.name}</p>
                     <div id="product-price">
@@ -43,8 +46,8 @@ const MoreInformations = () => {
                       </div>
                     </div>
                     <div id="buttons">
-                      <button className='product-button' id='buy' onClick={() => window.alert('ERRO! Recurso indispinível no momento =(')}>Comprar</button>
-                      <button className='product-button' id='cart' onClick={() => window.alert('ERRO! Recurso indispinível no momento =(')}>Adicionar ao carrinho</button>
+                      <button className='product-button' id='buy' onClick={() => window.alert('ERRO! Recurso indispinível no momento =(')}>COMPRAR</button>
+                      <button className='product-button' id='cart' onClick={() => window.alert('ERRO! Recurso indispinível no momento =(')}>ADICIONAR AO CARRINHO</button>
                     </div>
                   </div>
                 </div>

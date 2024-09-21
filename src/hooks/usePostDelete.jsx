@@ -5,10 +5,11 @@ export const usePostDelete = () => {
     const url = 'https://coconut-mewing-success.glitch.me/products'
     const [config, setConfig] = useState()
     const [method, setMethod] = useState()
+    const [id, setId] = useState()
     
+    // Altera o valor para que aja uma nova requisição GET para atualizar os dados
     const {setCallGet} = useContext(DataContext)
 
-    const [id, setId] = useState()
 
     const httpConfig = (data, method) => {
         if(method === 'POST'){
@@ -46,7 +47,7 @@ export const usePostDelete = () => {
             }
         }
         httpResquest()
-    }, [config, url, method])
+    }, [method])
 
     return {httpConfig}
 }

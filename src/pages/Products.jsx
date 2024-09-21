@@ -9,11 +9,11 @@ import { usePatch } from '../hooks/usePatch'
 
 import { Link } from 'react-router-dom'
 
-import vestuario from '../images/clothing-filter.png'
-import ferramentas from '../images/tools-filter.png'
-import tecnologia from '../images/technology-filter.png'
-import esporte from '../images/sport-filter.png'
-import casa from '../images/house-filter.png'
+import vestuario from '../images/clothing.png'
+import ferramentas from '../images/tools.png'
+import tecnologia from '../images/technology.png'
+import esporte from '../images/sport.png'
+import casa from '../images/house.png'
 
 import { useRef} from 'react'
 
@@ -35,7 +35,7 @@ const Products = () => {
   const inputSport = useRef()
   const inputHouse = useRef()
 
-  const handleCategory = () => {
+  const handleClothing = () => {
     inputClothing.current.style.display = 'flex'
     inputTools.current.style.display = 'none'
     inputTechnology.current.style.display = 'none'
@@ -116,33 +116,41 @@ const Products = () => {
       <main>
         <h1 id='title'>Navegue pelas categorias</h1>
         <div id="container-category">
+
           <div className="category">
-            <input type="radio" name="select-category" className='select-category' id='select-clothing' onClick={handleCategory}/>
+            <input type="radio" name="select-category" className='select-category' id='select-clothing' onClick={handleClothing}/>
             <img src={vestuario} alt="imagem vestuário" className='img-category'/>
             <p className="title-category">Vestuário</p>
           </div>
+
           <div className="category">
             <input type="radio" name="select-category" className='select-category' id='select-tools' onClick={handleTools}/>
             <img src={ferramentas} alt="imagem ferramentas" className='img-category'/>
             <p className="title-category">Ferramentas</p>
           </div>
+
           <div className="category">
             <input type="radio" name="select-category" className='select-category' id='select-technology' onClick={handleTechnology}/>
             <img src={tecnologia} alt="imagem tecnologia" className='img-category'/>
             <p className="title-category">Tecnologia</p>
           </div>
+
           <div className="category">
             <input type="radio" name="select-category" className='select-category' id='select-sport' onClick={handleSport}/>
             <img src={esporte} alt="imagem esporte" className='img-category'/>
             <p className="title-category">Esporte</p>
           </div>
+
           <div className="category">
             <input type="radio" name="select-category" className='select-category' id='select-house' onClick={handleHouse}/>
             <img src={casa} alt="imagem casa e móveis" className='img-category'/>
             <p className="title-category">Casa e Móveis</p>
           </div>
+
         </div>
+
         <div id="categorys">
+
           <div id='clothing' className="content-category" ref={inputClothing}>
             {loading && <p className='loading'>Carregando Vestuário</p>}
             {clothing && clothing.map((products) => (
@@ -165,8 +173,9 @@ const Products = () => {
               </Link>
             ))}
           </div>
+
           <div id="tools" className="content-category" ref={inputTools}>
-          {loading && <p className='loading'>Carregando Ferramentas</p>}
+            {loading && <p className='loading'>Carregando Ferramentas</p>}
             {tools && tools.map((products) => (
                 <Link to={`/more-information/${products.id}`} key={products.id} className='card-product'>
                   <div className="icons" onClick={(e) => e.preventDefault()}>
@@ -187,8 +196,9 @@ const Products = () => {
               </Link>
               ))}
           </div>
+
           <div id="technology" className="content-category" ref={inputTechnology}>
-          {loading && <p className='loading'>Carregando itens ligados a Tecnologia</p>}
+            {loading && <p className='loading'>Carregando itens ligados a Tecnologia</p>}
             {technology && technology.map((products) => (
                 <Link to={`/more-information/${products.id}`} key={products.id} className='card-product'>
                   <div className="icons" onClick={(e) => e.preventDefault()}>
@@ -209,8 +219,9 @@ const Products = () => {
               </Link>
               ))}
           </div>
+
           <div id="sport" className="content-category" ref={inputSport}>
-          {loading && <p className='loading'>Carregando itens ligados a Esporte</p>}
+            {loading && <p className='loading'>Carregando itens ligados a Esporte</p>}
             {sport && sport.map((products) => (
                 <Link to={`/more-information/${products.id}`} key={products.id} className='card-product'>
                   <div className="icons" onClick={(e) => e.preventDefault()}>
@@ -231,8 +242,9 @@ const Products = () => {
               </Link>
               ))}
           </div>
+
           <div id="house" className="content-category" ref={inputHouse}>
-          {loading && <p className='loading'>Carregando itens ligados a Casa e Móveis</p>}
+            {loading && <p className='loading'>Carregando itens ligados a Casa e Móveis</p>}
             {house && house.map((products) => (
                 <Link to={`/more-information/${products.id}`} key={products.id} className='card-product'>
                   <div className="icons" onClick={(e) => e.preventDefault()}>
@@ -253,6 +265,7 @@ const Products = () => {
               </Link>
               ))}
           </div>
+          
         </div>
       </main>
       <Footer></Footer>

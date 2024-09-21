@@ -24,6 +24,7 @@
     width: 100%;
 }
 #conteudo p{
+    color: rgb(156, 101, 61);
     font-size: 1.5em;
     font-weight: 600;
     text-align: center;
