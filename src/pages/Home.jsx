@@ -39,7 +39,7 @@ const Home = () => {
           </SwiperSlide>
           <SwiperSlide>
             <div className="container-slide">
-              <p className="slide-text">Na página PRODUTOS você poderá navegar entre as categorias de produtos e adicionar ou remover produtos da lista de destaque</p>
+              <p className="slide-text">Na página PRODUTOS você poderá navegar entre as categorias de produtos e adicionar ou remover produtos da lista de destaque. Além de poder excluir o produto</p>
             </div>
           </SwiperSlide>
           <SwiperSlide>
