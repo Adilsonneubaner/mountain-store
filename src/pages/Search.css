@@ -1,11 +1,38 @@
 #main-search{
     padding: 0 20px;
 }
-#search-title{
+#container-loading{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content-loading{
+    width: 50px;
+    height: 50px;
+    border: 10px solid black;
+    border-image: linear-gradient(90deg, #f7a265 26%, #f7df65 100%) 1;
+    animation: spin 2s infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.search-title{
     font-size: 2.3em;
     color: #F7A265;
     text-align: center;
     margin-top: 100px;
+}
+#container-not-found{
+    height: 50vh;
+    margin: 100px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#image-not-found{
+   max-width: 400px;
 }
 #product-search{
     margin: 100px 0;

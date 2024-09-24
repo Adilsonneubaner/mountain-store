@@ -152,7 +152,6 @@ const Products = () => {
         <div id="categorys">
 
           <div id='clothing' className="content-category" ref={inputClothing}>
-            {loading && <p className='loading'>Carregando Vestuário</p>}
             {clothing && clothing.map((products) => (
               <Link to={`/more-information/${products.id}`} key={products.id} className='card-product'>
                 <div className="icons" onClick={(e) => e.preventDefault()}>
@@ -175,7 +174,6 @@ const Products = () => {
           </div>
 
           <div id="tools" className="content-category" ref={inputTools}>
-            {loading && <p className='loading'>Carregando Ferramentas</p>}
             {tools && tools.map((products) => (
                 <Link to={`/more-information/${products.id}`} key={products.id} className='card-product'>
                   <div className="icons" onClick={(e) => e.preventDefault()}>
@@ -198,7 +196,6 @@ const Products = () => {
           </div>
 
           <div id="technology" className="content-category" ref={inputTechnology}>
-            {loading && <p className='loading'>Carregando itens ligados a Tecnologia</p>}
             {technology && technology.map((products) => (
                 <Link to={`/more-information/${products.id}`} key={products.id} className='card-product'>
                   <div className="icons" onClick={(e) => e.preventDefault()}>
@@ -221,7 +218,6 @@ const Products = () => {
           </div>
 
           <div id="sport" className="content-category" ref={inputSport}>
-            {loading && <p className='loading'>Carregando itens ligados a Esporte</p>}
             {sport && sport.map((products) => (
                 <Link to={`/more-information/${products.id}`} key={products.id} className='card-product'>
                   <div className="icons" onClick={(e) => e.preventDefault()}>
@@ -244,7 +240,6 @@ const Products = () => {
           </div>
 
           <div id="house" className="content-category" ref={inputHouse}>
-            {loading && <p className='loading'>Carregando itens ligados a Casa e Móveis</p>}
             {house && house.map((products) => (
                 <Link to={`/more-information/${products.id}`} key={products.id} className='card-product'>
                   <div className="icons" onClick={(e) => e.preventDefault()}>
