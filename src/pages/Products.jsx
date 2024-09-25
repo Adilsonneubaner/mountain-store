@@ -41,6 +41,11 @@ const Products = () => {
     inputTechnology.current.style.display = 'none'
     inputSport.current.style.display = 'none'
     inputHouse.current.style.display = 'none'
+
+    inputClothing.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
   }
 
   const handleTools = () => {
@@ -49,6 +54,11 @@ const Products = () => {
     inputTechnology.current.style.display = 'none'
     inputSport.current.style.display = 'none'
     inputHouse.current.style.display = 'none'
+
+    inputTools.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
   }
 
   const handleTechnology = () => {
@@ -57,6 +67,11 @@ const Products = () => {
     inputTools.current.style.display = 'none'
     inputSport.current.style.display = 'none'
     inputHouse.current.style.display = 'none'
+
+    inputTechnology.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
   }
 
   const handleSport = () => {
@@ -65,6 +80,11 @@ const Products = () => {
     inputTools.current.style.display = 'none'
     inputTechnology.current.style.display = 'none'
     inputHouse.current.style.display = 'none'
+
+    inputSport.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
   }
 
   const handleHouse = () => {
@@ -73,6 +93,11 @@ const Products = () => {
     inputTools.current.style.display = 'none'
     inputTechnology.current.style.display = 'none'
     inputSport.current.style.display = 'none'
+
+    inputHouse.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
   }
  
   
