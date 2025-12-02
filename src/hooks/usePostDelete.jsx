@@ -2,12 +2,12 @@ import { useEffect, useState, useContext } from "react";
 import { DataContext } from "../context/DataContext";
 
 export const usePostDelete = () => {
-    const url = 'https://coconut-mewing-success.glitch.me/products'
+    const url = 'https://json-server-api-mountain-store.onrender.com/products'
     const [config, setConfig] = useState()
     const [method, setMethod] = useState()
     const [id, setId] = useState()
     
-    // Altera o valor para que aja uma nova requisição GET para atualizar os dados
+    // Altera o valor para que haja uma nova requisição GET para atualizar os dados
     const {setCallGet} = useContext(DataContext)
 
 

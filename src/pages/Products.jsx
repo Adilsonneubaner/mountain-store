@@ -18,7 +18,7 @@ import casa from '../images/house.png'
 import { useRef} from 'react'
 
 const Products = () => {
-  const url = 'https://coconut-mewing-success.glitch.me/products'
+  const url = 'https://json-server-api-mountain-store.onrender.com/products'
   const {data, loading} = useGet(url)
   const {httpConfig} = usePostDelete()
   const {patchConfig} = usePatch()

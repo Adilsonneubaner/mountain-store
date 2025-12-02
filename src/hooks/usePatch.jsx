@@ -6,7 +6,7 @@ export const usePatch = () => {
     const [method, setMethod] = useState()
     const [config, setConfig] = useState()
 
-    const url = 'https://coconut-mewing-success.glitch.me/products'
+    const url = 'https://json-server-api-mountain-store.onrender.com/products'
 
     // Altera o valor para que aja uma nova requisição GET para atualizar os dados
     const {setCallGet} = useContext(DataContext)

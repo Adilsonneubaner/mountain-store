@@ -15,7 +15,7 @@ import 'swiper/css/pagination'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
-  const url = 'https://coconut-mewing-success.glitch.me/products'
+  const url = 'https://json-server-api-mountain-store.onrender.com/products'
   const {data, loading} = useGet(url)
 
   return (

@@ -13,7 +13,7 @@ const Search = () => {
     const [searchParams] = useSearchParams()
     let query = searchParams.get('q')
     query = query.toLowerCase()
-    const url = 'https://coconut-mewing-success.glitch.me/products'
+    const url = 'https://json-server-api-mountain-store.onrender.com/products'
     const {data, loading} = useGet(url)
     const filteredData = data?.filter(product => product.stringLower.includes(query))
     console.log(filteredData)
