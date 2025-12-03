@@ -33,9 +33,11 @@
     border-radius: 10px;
     position: relative;
 }
+#categorys{
+    margin-top: 50px;
+}
 .no-product{
     color: #9c653d;
-    margin-top: 50px;
 }
 .select-category{
     all: unset;
