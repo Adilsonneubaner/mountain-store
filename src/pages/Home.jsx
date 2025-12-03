@@ -13,10 +13,23 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 const Home = () => {
   const url = 'https://json-server-api-mountain-store.onrender.com/products'
   const {data, loading} = useGet(url)
+
+  const [emphasis, setEmphasis] = useState('')
+
+  useEffect(() => {
+    data && data.some(data => {
+      if(data.emphasis){
+        setEmphasis(true)
+        return true
+      }
+      return false
+    })
+  },[data])
 
   return (
     <>
@@ -51,21 +64,36 @@ const Home = () => {
         
         <div className="container-destaque">
           <h1 className="title-destaque">Destaque</h1>
-          {loading && <p className='loading'>Carregando os resultados...</p>}
-          <div id="conteudo-destaque">
-            {data && data.map((data) => (
-              data.emphasis && 
-              <Link to={`/more-information/${data.id}`} key={data.id} className='card-product'>
-                  <div className="img-product" style={{
-                    background: `white url(${data.photo}) center center no-repeat`,
-                    backgroundSize: 'contain'
-                  }}></div>
-                  <p className="title-product">{data.name}</p>
-                  <p className='price-product'>R${data.price}</p>
-                  <p className='informations'>Ver mais informações</p>
-              </Link>
-            ))}
-          </div>
+
+          {loading &&
+           <p className='loading'>Carregando os resultados...</p>
+          }
+
+          {!loading &&
+            <>
+              {!emphasis? 
+                <p className='not-highlighted'>Ainda não há produtos em destaque</p>  
+              :
+                <div id="conteudo-destaque">
+
+                  {data && data.map((data) => (
+                    data.emphasis && 
+                    <Link to={`/more-information/${data.id}`} key={data.id} className='card-product'>
+                      <div className="img-product" style={{
+                        background: `white url(${data.photo}) center center no-repeat`,
+                        backgroundSize: 'contain'
+                      }}></div>
+                      <p className="title-product">{data.name}</p>
+                      <p className='price-product'>R${data.price}</p>
+                      <p className='informations'>Ver mais informações</p>
+                    </Link>
+                  ))}
+
+                </div>
+              }
+            </>
+          }
+
         </div>
       </main>
       <Footer></Footer>

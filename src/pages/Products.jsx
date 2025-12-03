@@ -15,13 +15,15 @@ import tecnologia from '../images/technology.png'
 import esporte from '../images/sport.png'
 import casa from '../images/house.png'
 
-import { useRef} from 'react'
+import { useRef, useState} from 'react'
 
 const Products = () => {
   const url = 'https://json-server-api-mountain-store.onrender.com/products'
   const {data, loading} = useGet(url)
   const {httpConfig} = usePostDelete()
   const {patchConfig} = usePatch()
+
+  const [err, setErr] = useState('')
 
   const clothing = []
   const tools = []
@@ -177,6 +179,13 @@ const Products = () => {
         <div id="categorys">
 
           <div id='clothing' className="content-category" ref={inputClothing}>
+
+            {clothing.length === 0? 
+              <p className='no-product'>Não há nenhum produto nessa categoria</p>
+            :
+              ''
+            }
+
             {clothing && clothing.map((products) => (
               <Link to={`/more-information/${products.id}`} key={products.id} className='card-product'>
                 <div className="icons" onClick={(e) => e.preventDefault()}>
@@ -199,6 +208,13 @@ const Products = () => {
           </div>
 
           <div id="tools" className="content-category" ref={inputTools}>
+
+            {tools.length === 0? 
+              <p className='no-product'>Não há nenhum produto nessa categoria</p>
+            :
+              ''
+            }
+
             {tools && tools.map((products) => (
                 <Link to={`/more-information/${products.id}`} key={products.id} className='card-product'>
                   <div className="icons" onClick={(e) => e.preventDefault()}>
@@ -217,10 +233,17 @@ const Products = () => {
                   <p className="title-product">{products.name}</p>
                   <p className='price-product'>R${products.price}</p>
               </Link>
-              ))}
+            ))}
           </div>
 
           <div id="technology" className="content-category" ref={inputTechnology}>
+
+            {technology.length === 0? 
+              <p className='no-product'>Não há nenhum produto nessa categoria</p>
+            :
+              ''
+            }
+
             {technology && technology.map((products) => (
                 <Link to={`/more-information/${products.id}`} key={products.id} className='card-product'>
                   <div className="icons" onClick={(e) => e.preventDefault()}>
@@ -239,10 +262,17 @@ const Products = () => {
                   <p className="title-product">{products.name}</p>
                   <p className='price-product'>R${products.price}</p>
               </Link>
-              ))}
+            ))}
           </div>
 
           <div id="sport" className="content-category" ref={inputSport}>
+
+            {sport.length === 0? 
+              <p className='no-product'>Não há nenhum produto nessa categoria</p>
+            :
+              ''
+            }
+
             {sport && sport.map((products) => (
                 <Link to={`/more-information/${products.id}`} key={products.id} className='card-product'>
                   <div className="icons" onClick={(e) => e.preventDefault()}>
@@ -261,10 +291,17 @@ const Products = () => {
                   <p className="title-product">{products.name}</p>
                   <p className='price-product'>R${products.price}</p>
               </Link>
-              ))}
+            ))}
           </div>
 
           <div id="house" className="content-category" ref={inputHouse}>
+
+            {house.length === 0? 
+              <p className='no-product'>Não há nenhum produto nessa categoria</p>
+            :
+              ''
+            }
+
             {house && house.map((products) => (
                 <Link to={`/more-information/${products.id}`} key={products.id} className='card-product'>
                   <div className="icons" onClick={(e) => e.preventDefault()}>
@@ -283,7 +320,7 @@ const Products = () => {
                   <p className="title-product">{products.name}</p>
                   <p className='price-product'>R${products.price}</p>
               </Link>
-              ))}
+            ))}
           </div>
           
         </div>

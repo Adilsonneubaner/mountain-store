@@ -23,7 +23,8 @@ span.swiper-pagination-bullet-active{
 }
 
 .container-destaque{
-    padding: 0px 30px 30px 30px;
+    padding: 0px 30px;
+    margin: 100px 0;
 }
 .title-destaque{
     font-family: "Alfa Slab One", serif;
@@ -34,7 +35,11 @@ span.swiper-pagination-bullet-active{
     color: black;
     font-size: 5.5em;
     text-align: center;
-    margin-top: 100px;
+}
+.not-highlighted{
+   color: #9c653d; 
+   text-align: center;
+   margin-top: 50px;
 }
 .loading{
     color: rgb(156, 101, 61);
